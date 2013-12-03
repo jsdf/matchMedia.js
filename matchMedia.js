@@ -64,7 +64,7 @@ window.matchMedia = window.matchMedia || (function(doc, undefined){
           max = mq.match( /\(max\-width:[\s]*([\s]*[0-9\.]+)(px|em)[\s]*\)/ ) && parseFloat( RegExp.$1 ) + ( RegExp.$2 || "" ),
           minnull = min === null,
           maxnull = max === null,
-          currWidth = doc.body.offsetWidth,
+          currWidth = doc.documentElement.offsetWidth,
           em = 'em';
       
       if( !!min ) { min = parseFloat( min ) * ( min.indexOf( em ) > -1 ? ( eminpx || getEmValue() ) : 1 ); }
